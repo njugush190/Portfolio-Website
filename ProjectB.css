@@ -1,0 +1,491 @@
+
+*{
+    
+    box-sizing: border-box;
+}
+html{
+    padding: 0;
+}
+body{
+    margin:0;
+    background:linear-gradient(
+        to bottom,
+        black 50%,
+        black 90%,
+        white 100%
+    )
+}
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 0px;
+    left: -500px; /* Hidden by default */
+    width: 500px;
+    height: auto;
+    background-color: #111;
+    color: white;
+    overflow-x: hidden;
+    transition: 0.5s; /* Smooth slide-in animation */
+    z-index: 1;
+    padding-top: 20px;
+}
+
+.sidebar.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.sidebar .menu {
+    list-style: none;
+    padding: 0;
+    margin: 20px 5px 10px 4px;
+}
+
+.sidebar .menu li {
+    padding: 30px 35px;
+    margin-top: 10px;
+    color: azure;
+}
+
+.sidebar .menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    transition: 0.5s ease-in;
+}
+
+.sidebar .menu li a:hover {
+    background-color: #0c9651;
+    border-radius: 5px;
+    font-style: oblique;
+    font-weight: 350px;
+}
+
+/* Menu Button */
+.menu-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    background-color: #111;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 5;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.menu-btn:hover {
+    background-color: green;
+}
+
+/* Sidebar Active State */
+.sidebar.active {
+    left: 0; /* Slide in the sidebar */ /*In place of Active I had placed Slidey and no difference occurs*/
+}
+header{
+    text-align: center;
+    margin-top: 5%;
+}
+
+#Homey,#Servy{
+    display:none;
+}
+#Homey{
+    display: block;
+    padding: 15px;
+    border: 1px darkblue double;
+    color:white;
+    height:auto;
+    font-size:xx-large;
+    margin-left:550px;
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 1000;
+}
+#Servy{
+    display: block;
+    border: 1px solid black;
+    padding: 12px;
+    font-size:large;
+    margin-left: 550px;
+    font-weight: 1000;
+    color:white;
+    height: 10cm;
+    animation: myMove 3s infinite 2s normal;
+
+}
+#abouty{
+    display: none;
+    padding: 15px;
+    border: 1px solid black;
+    color:white;
+    height: auto;
+    margin-left:600px;
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 1000;
+}
+#Servy h1{
+    text-align:center;
+    color:red;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+@keyframes myMove {
+
+ 0%{
+    transform: translateX(0);
+}
+25% {
+    transform: translateX(25%);
+}
+50%{
+    transform: translateX(50%);
+}
+75%{
+    transform: translateX(75%);
+}
+100%{
+    transform: translateX(100%);
+} 
+    
+}
+
+#Conty{
+    display:block;
+    border: 2px solid grey;
+    font-size:large;
+    color:white;
+    height: auto;
+    margin-top:0cm;
+    margin-left:900px;
+    text-align: center;
+    width: 15cm;
+}
+
+.fa.envelope{
+    width: 5cm;
+    height: 5cm;
+    color: turquoise;
+}
+ #Conty a{
+    font-size: 20px;
+    color: #007bff;
+    text-decoration: none;
+}
+  
+ #Conty a:hover {
+    color: #0056b3;
+}
+
+#Loan{
+   border: 3px solid white;
+   padding-top:10px;
+   font-size: medium;
+   font-weight: 600;
+   font-style: italic;
+   width: 100%;
+   display:none;
+   transform:translateY(100px);
+}
+ @keyframes Mywak{
+    from{
+        transform: translateY(100px);
+    }
+    to{
+        transform: translateY(0px);
+        
+    }
+}
+
+#Loan img{
+    width: 60%;
+    border: 2px solid black;
+    height: 12cm;
+}
+#Loan h1, #Kazi h1{
+    text-align: center;
+    color:red;
+    font-size: xx-large;
+    font-weight: 800;
+}
+#Loan p, #Kazi p{
+    font-size: xx-large;
+    font-weight: 800;
+    font-style: italic;
+    color: white;
+}
+
+#Kazi{
+    border: 2px solid gray;
+    padding-top:10px;
+    font-size: large;
+    font-weight: 600;
+    display:none;
+    font-style: italic;
+    width: 100%;
+}
+#Kazi img{
+    width: 100%;
+    border: 2px solid black;
+}
+#Kazi.Kazi-active{
+    display: block;
+}
+#Loany{
+    margin-left: 45%;
+    background-color: rgba(100,250,200,0.6);
+    width: 5cm;
+    text-align: center;
+    font-weight: 800;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: oblique;
+    height: 1cm;
+    display: none;
+}
+#Loany:hover{
+    color: hwb(300 80 20);
+    font-style: italic;
+    width: 7cm;
+    font-weight: 800;
+    font-size:25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#Kazy{
+    margin-left: 45%;
+    background-color: rgba(100,250,250,0.8);
+    width: 5cm;
+    text-align: center;
+    font-weight: 800;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 1cm;
+    display: none;
+}
+#Kazy:hover{
+    font-size:25px;
+    width: 7cm;
+    font-weight: 800;
+    font-family: 'Times New Roman', Times, serif;
+    color: hwb(350 90 10);
+}
+
+#Financials{
+    border: 1px solid blue;
+    background-color: wheat;
+    width: 5cm;
+    border-radius: 25%;
+    margin-left: 45%;
+    height: 1cm;
+    display:none;
+    text-align: center;
+    font-weight: 800;
+    font-style: italic;
+    font-family:'Times New Roman', Times, serif;
+}
+#Statements{
+    display: none;
+    grid-template-columns: 60% 40%;
+    grid-template-rows:1fr;
+    width: 100%;
+    height: 15cm;
+    background-color: white;
+    border: 2px solid green;
+}
+#Statements h1{
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 700;
+}
+#BalanceSheet{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    border: 2px solid black;
+}
+#BalanceSheet h1{
+    text-align: left;
+    color: #007bff;
+}
+#Screens img{
+    width: 48%;
+    height: 12cm;
+}
+#IncomeStatement{
+    display: grid;
+}
+#IncomeStatement p{
+    margin-top: 1px;
+}
+#IncomeStatement h1{
+    color: #007bff;
+    text-align: left;
+}
+#IncomeStatement img{
+    width: 95%;
+    height: 10cm;
+}
+#Lovey{
+    border-radius: 25%;
+    border: 2px solid yellowgreen;
+    width: 8cm;
+    height: 2cm;
+    margin-left: 45%;
+    margin-top: 45%;
+    animation: none;
+}
+@keyframes Loe{
+    0%{
+        margin-top: 45%;
+        background-color: rgba(100,250,200,0.6);
+        width: 4cm;
+    }
+    25%{
+        margin-top: 30%;
+        background-color: royalblue;
+        width: 6cm;
+    }
+    50%{
+        margin-top: 20%;
+        background-color: red;
+        width: 10cm;
+    }
+    75%{
+        margin-top: 10%;
+        background-color: wheat;
+        width: 6cm;
+    }
+    100%{
+        margin-top: 0%;
+        background-color: rgba(100,250,200,0.6);
+        width: 8cm;
+    }
+}
+
+#Lovey h1{
+     color: whitesmoke;
+     text-align: center;
+     font-size: xx-large;
+     font-weight: 800;
+}
+#Lovey:hover{
+    background-color: rgba(130,200,180,0.7);
+    color: hwb(250 70 30 0.8);
+    font-style: italic;
+    font-weight: 800;
+    font-family: 'Times New Roman', Times, serif;
+}
+footer{
+    background-color: white;
+    width: 100%;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top:120px;
+    margin-right: 0px;
+    height: 12cm;
+}
+footer h1{
+    text-align: center;
+    color: black;
+    font-size: xx-large;
+    font-weight: 800;
+}
+#Foota{
+    display: none;
+    grid-template-columns: 1fr 1fr 2fr;
+}
+#skills,#values{
+    padding: 5px;
+    border: 1px solid black;
+    margin: 5px;
+    margin-top: 33px;
+    background-color: #f0f0f0;
+    width: 95%;
+    height: 10cm;
+    list-style-type: none;
+}
+#skills li,#values li{
+    list-style-type: none;
+    padding: 5px;
+    margin-top: 15px ;
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#terms{
+    background-color: #f0f0f0;
+    height: 10cm;
+    margin: 5px;
+    margin-top: 33px;
+    border: 1px solid black;
+}
+#terms li{
+    list-style-type: none;
+    padding: 5px;
+    margin-top: 15px ;
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
+}
+#terms a{
+    float: right;
+    bottom: 10px;
+    margin-right: 70px;
+}
+
+/* For Mobile Devices */
+@media (max-width: 768px) {
+    body {
+        background-color: #111; /* Darker background for mobile */
+    }
+
+    #Loany, #Kazy {
+        width: 100%;
+        margin-left: 0;
+        font-size: 18px; /* Smaller font size */
+    }
+
+    #Loan img, #Kazi img {
+        width: 100%; /* Make images responsive */
+    }
+
+    .menu-btn {
+        font-size: 20px;
+        padding: 8px 10px;
+    }
+}
+
+/* For Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #Conty {
+        width: 60%;
+        margin-left:50%;
+    }
+
+    #Loan, #Kazi {
+        font-size: medium;
+    }
+}
+
+/* For Desktops */
+@media (min-width: 1025px) {
+    #Lovey {
+        width: 7cm;
+        margin-left: 40%;
+    }
+
+    #Loan, #Kazi {
+        font-size: large;
+    }
+}
+
+
